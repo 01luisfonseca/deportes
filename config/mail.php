@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
+    'from' => ['address' => 'info@skydots.co', 'name' => 'Info Apps'],
 
     /*
     |--------------------------------------------------------------------------
