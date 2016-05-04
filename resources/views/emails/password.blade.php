@@ -1,0 +1,1 @@
+Por favor haga click acá para reiniciar su contraseña del sitio de administración de deportes: {{ url('password/reset/'.$token) }}
