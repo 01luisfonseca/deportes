@@ -15,7 +15,7 @@ Route::get('/', function () {
     return redirect('auth/login');
 });
 
-Route::group(['namespace'=>'auth'],function(){
+Route::group(['namespace'=>'Auth'],function(){
 	Route::group(['prefix'=>'auth'],function(){
 		// Authentication routes...
 		Route::get('/login', 'AuthController@getLogin');
