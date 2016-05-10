@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.css">
 <script src='https://cdnjs.cloudflare.com/ajax/libs/foundation/6.2.1/foundation.min.js'></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
-<link rel="icon" type="image/ico" href="public/sports_16.png">
+<link rel="icon" type="image/ico" href="/public/sports_16.png">
 </head>
 	<body>
 	@yield('body')
