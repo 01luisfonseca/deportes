@@ -14,7 +14,7 @@
 	app.directive('appDir',function(){
 		return {
 			restrict: 'E',
-			templateUrl: '/html/postindex.html'
+			templateUrl: '/public/html/postindex.html'
 		};
 	});
 })();
