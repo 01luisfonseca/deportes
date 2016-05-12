@@ -23,19 +23,43 @@ class EnlacesMenu extends Migration
             $table->increments('id');
             $table->string('name');
             $table->string('link');
-            $table->integer('padre');
             $table->integer('peso');
             $table->timestamps();
             $table->softDeletes();
         });
-        Schema::create('derechos_has_enlaces', function (Blueprint $table) {
+        Schema::create('subenlaces', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('derechos_id');
+            $table->string('name');
+            $table->string('link');
             $table->integer('enlaces_id');
+            $table->integer('peso');
             $table->timestamps();
             $table->softDeletes();
         });
-        Shcema::table('users',function($table){
+        Schema::create('subsubenlaces', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name');
+            $table->string('link');
+            $table->integer('subenlaces_id');
+            $table->integer('peso');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+        Schema::create('derechos_has_subenlaces', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('derechos_id');
+            $table->integer('subenlaces_id');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+        Schema::create('derechos_has_subsubenlaces', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('derechos_id');
+            $table->integer('subsubenlaces_id');
+            $table->timestamps();
+            $table->softDeletes();
+        });
+        Schema::table('users',function($table){
             $table->softDeletes();
             $table->integer('derechos_id');
             $table->integer('estado');
@@ -51,6 +75,8 @@ class EnlacesMenu extends Migration
     {
         Schema::drop('derechos');
         Schema::drop('enlaces');
+        Schema::drop('subenlaces');
+        Schema::drop('subsubenlaces');
         Schema::drop('derechos_has_enlaces');
     }
 }

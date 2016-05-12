@@ -15,6 +15,8 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call(UserTableSeeder::class);
+        DB::table('derechos')->insert(['name'=>'Admininistrador','descripcion'=>'Superadministrador del programa']);
+        DB::table('derechos')->insert(['name'=>'Estándar','descripcion'=>'Usuario estandar']);
 
         Model::reguard();
     }
