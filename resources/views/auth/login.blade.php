@@ -1,26 +1,37 @@
 @extends('app')
  
 @section('body')
-<div class="row">
-  <div class="medium-6 medium-centered large-4 large-centered columns">
-    <form method="POST" action="/auth/login">
+<!-- LOGIN FORM -->
+<div class="text-center" style="padding:50px 0">
+  <div class="logo">Ingreso</div>
+  <!-- Main Form -->
+  <div class="login-form-1">
+    <form id="login-form" class="text-left" method="POST" action="/auth/login">
         {!! csrf_field() !!}
-      <div class="row column log-in-form">
-        <h4 class="text-center">Sistema de gestión de deportes.</h4>
-        <h6 class="text-center">Por favor, entre con su cuenta de correo.</h6>
-        <label>Email
-          <input type="email" name="email" placeholder="algo@dominio.com">
-        </label>
-        <label>Contraseña
-          <input type="password" name="password" id="password" placeholder="Contraseña">
-        </label>
-        <input id="remember" type="checkbox" name="remember"><label for="remember">Recordar usuario</label>
-        <input id="show-password" type="checkbox"><label for="show-password">Mostrar contraseña</label>
-        <input type="submit" class="button expanded" value="Entrar">
-        <p class="text-center"><a href="/password/email">Olvidaste la contraseña?</a></p>
-        <p class="text-center"><a href="/auth/register">Eres nuevo?... Regístrate</a></p>  
+      <div class="login-form-main-message">Por favor ingrese sus credenciales</div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <div class="form-group">
+            <label for="lg_username" class="sr-only">Email</label>
+            <input type="email" class="form-control" id="lg_username" name="email" placeholder="algo@dominio.com">
+          </div>
+          <div class="form-group">
+            <label for="lg_password" class="sr-only">Contraseña</label>
+            <input type="password" class="form-control" id="lg_password" name="password" placeholder="contraseña">
+          </div>
+          <div class="form-group login-group-checkbox">
+            <input type="checkbox" id="lg_remember" name="remember">
+            <label for="lg_remember">Recordar</label>
+          </div>
+        </div>
+        <button type="submit" class="login-button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+      </div>
+      <div class="etc-login-form">
+        <p>Olvidaste la contraseña? <a href="/password/email">Haz click aquí</a></p>
+        <p>Eres nuevo? <a href="/auth/register">Regístrate</a></p>
       </div>
     </form>
   </div>
+  <!-- end:Main Form -->
 </div>
 @endsection

@@ -1,31 +1,43 @@
 @extends('app')
  
 @section('body')
-<div class="row">
-  <div class="medium-6 medium-centered large-4 large-centered columns">
-    <form method="POST" action="/auth/register">
-        {!! csrf_field() !!}
-      <div class="row column log-in-form">
-        <h4 class="text-center">Sistema de gestión de deportes.</h4>
-        <h6 class="text-center">Por favor, registre su información.</h6>
-        <label>Nombre
-          <input type="text" name="name" placeholder="Nombre o apodo">
-        </label>
-        <label>Email
-          <input type="email" name="email" placeholder="algo@dominio.com">
-        </label>
-        <label>Contraseña
-          <input type="password" name="password" id="password" placeholder="Contraseña">
-        </label>
-        <label>Verificar contraseña
-          <input type="password" name="password_confirmation" id="password_confirmation" placeholder="Volver a ingresar contraseña">
-        </label>
-        <input id="show-password" type="checkbox"><label for="show-password">Mostrar contraseña</label>
-        <input type="submit" class="button expanded" value="Registrar nuevo usuario">
-        <p class="text-center"><a href="/password/email">Olvidaste la contraseña?.</a></p>
-        <p class="text-center"><a href="/auth/login">Conoces tu usuario? Inicia sesión.</a></p>
+
+<!-- REGISTRATION FORM -->
+<div class="text-center" style="padding:50px 0">
+  <div class="logo">Registro</div>
+  <!-- Main Form -->
+  <div class="login-form-1">
+    <form id="register-form" class="text-left" method="POST" action="/auth/register">
+    {!! csrf_field() !!}
+      <div class="login-form-main-message">Área para dar de alta a usuarios</div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <div class="form-group">
+            <label for="reg_username" class="sr-only">Nombre o apodo </label>
+            <input type="text" class="form-control" id="reg_username" name="name" placeholder="nombre">
+          </div>
+          <div class="form-group">
+            <label for="reg_password" class="sr-only">Contraseña</label>
+            <input type="password" class="form-control" id="reg_password" name="password" placeholder="contraseña">
+          </div>
+          <div class="form-group">
+            <label for="reg_password_confirm" class="sr-only">Confirmar contraseña</label>
+            <input type="password" class="form-control" id="reg_password_confirm" name="password_confirmation" placeholder="confirmar contraseña">
+          </div>
+          
+          <div class="form-group">
+            <label for="reg_email" class="sr-only">Email</label>
+            <input type="email" class="form-control" id="reg_email" name="email" placeholder="email">
+          </div>
+
+        <button type="submit" class="login-button"><i class="glyphicon glyphicon-chevron-right"></i></button>
+      </div>
+      <div class="etc-login-form">
+        <p>Ya tienes cuenta? <a href="/auth/login">Inicia sesión.</a></p>
+        <p>Olvidaste tu contraseña? <a href="/password/email">Recupérala.</a></p>
       </div>
     </form>
   </div>
+  <!-- end:Main Form -->
 </div>
 @endsection

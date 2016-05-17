@@ -77,6 +77,7 @@ class EnlacesMenu extends Migration
         Schema::drop('enlaces');
         Schema::drop('subenlaces');
         Schema::drop('subsubenlaces');
-        Schema::drop('derechos_has_enlaces');
+        Schema::drop('derechos_has_subenlaces');
+        Schema::drop('derechos_has_subsubenlaces');
     }
 }
