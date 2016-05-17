@@ -13,7 +13,7 @@
         <div class="login-group">
           <div class="form-group">
             <label for="lg_username" class="sr-only">Email</label>
-            <input type="email" class="form-control" id="lg_username" name="email" placeholder="algo@dominio.com">
+            <input type="email" class="form-control" id="lg_username" name="email" placeholder="email">
           </div>
           <div class="form-group">
             <label for="lg_password" class="sr-only">Contraseña</label>

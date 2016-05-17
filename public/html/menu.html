@@ -1,0 +1,39 @@
+	<script src='/public/assets/js/menu-action.js'></script>
+ 
+ 	<nav class="navbar navbar-fixed-left navbar-minimal animate" role="navigation" ng-controller='menuCtrl'>
+		<div class="navbar-toggler animate">
+			<span class="menu-icon"></span>
+		</div>
+		<ul class="navbar-menu animate">
+			<li>
+				<a href="#/inicio" class="animate">
+					<span class="desc animate"> Inicio </span>
+					<span class="glyphicon glyphicon-home"></span>
+				</a>
+			</li>
+			<li>
+				<a href="#/usuario" class="animate">
+					<span class="desc animate"> Modificaciones de usuario </span>
+					<span class="glyphicon glyphicon-user"></span>
+				</a>
+			</li>
+			<li ng-repeat='enlace in enlaces.data'>
+				<a ng-href="#{{enlace.enlaces.link}}" class="animate">
+					<span class="desc animate"> {{enlace.enlaces.name}} </span>
+					<span class="glyphicon glyphicon-option-vertical"></span>
+				</a>
+			</li>
+			<li ng-show='admin'>
+				<a href="#/app-admin" class="animate">
+					<span class="desc animate"> Opciones administrativas </span>
+					<span class="glyphicon glyphicon-th"></span>
+				</a>
+			</li>
+			<li>
+				<a href="auth/logout" class="animate">
+					<span class="desc animate"> Cerrar sesión </span>
+					<span class="glyphicon glyphicon-remove"></span>
+				</a>
+			</li>
+		</ul>
+	</nav>

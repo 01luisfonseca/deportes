@@ -41,4 +41,10 @@ Route::group(['middleware'=>'auth'], function(){
 			return view('welcome');
 		});
 	});
+	Route::group(['namespace'=>'usuario'],function(){
+		Route::group(['prefix'=>'usuario'],function(){
+			Route::get('/enlaces','EnlacesCtrl@index');
+			Route::get('/esadmin','InfoCtrl@esAdmin');
+		});
+	});
 });
