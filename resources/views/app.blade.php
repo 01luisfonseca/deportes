@@ -7,6 +7,8 @@
 	<title>App</title>
 	<script src='/public/assets/js/jquery-2.2.3.min.js'></script>
 	<script src='/public/assets/js/angular.min.js'></script>
+	<script src='/public/assets/js/angular-animate.min.js'></script>
+	<script src='/public/assets/js/angular-sanitize.min.js'></script>
 	<script src='/public/assets/js/angular-route.min.js'></script>
 	<script src='/public/assets/js/bootstrap.min.js'></script>
 	<link rel="stylesheet" href="/public/assets/css/bootstrap.min.css">

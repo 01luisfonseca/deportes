@@ -1,5 +1,5 @@
 (function(){
-	var app=angular.module('aplicacion',['menumod','ngRoute','contmod']);
+	var app=angular.module('aplicacion',['ngAnimate','ngSanitize','ngRoute','menumod','contmod']);
 	app.directive('appDir',function(){
 		return {
 			restrict: 'E',
@@ -14,7 +14,7 @@
 			})
 			.when('/app-admin',{
 				controller:'adminCtrl',
-				templateUrl:'/public/html/inicio.html'
+				templateUrl:'/public/html/admin.html'
 			})
 			.otherwise({
 				redirectTo:'/inicio'
