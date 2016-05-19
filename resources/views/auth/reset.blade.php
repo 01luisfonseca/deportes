@@ -2,7 +2,7 @@
  
 @section('body')
 <div class="text-center" style="padding:50px 0">
-  <div class="logo">Recuperación</div>
+  <div class="logo title">Recuperación</div>
   <!-- Main Form -->
   <div class="login-form-1">
     <form id="forgot-password-form" class="text-left" method="POST" action="/password/reset">

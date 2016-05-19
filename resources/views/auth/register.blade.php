@@ -4,7 +4,7 @@
 
 <!-- REGISTRATION FORM -->
 <div class="text-center" style="padding:50px 0">
-  <div class="logo">Registro</div>
+  <div class="logo title">Registro</div>
   <!-- Main Form -->
   <div class="login-form-1">
     <form id="register-form" class="text-left" method="POST" action="/auth/register">

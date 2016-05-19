@@ -21,8 +21,6 @@ Last change	: 2015/03/27
 /*=== 1. General Structure ===*/
 html,
 body {
-  background: #efefef;
-  padding: 10px;
   font-family: 'Varela Round';
 }
 /*=== 2. Anchor Link ===*/
@@ -37,6 +35,8 @@ a:hover {
 /*=== 3. Text Outside the Box ===*/
 .etc-login-form {
   color: #919191;
+  background-color: rgba(225,225,180,0.9);
+  border-radius: 10px;
   padding: 10px 20px;
 }
 .etc-login-form p {
@@ -45,6 +45,8 @@ a:hover {
 /*=== 4. Main Form ===*/
 .login-form-1 {
   max-width: 300px;
+  color: rgb(226, 255, 0);
+  box-shadow: 0 0 20px black;
   border-radius: 5px;
   display: inline-block;
 }
@@ -80,6 +82,7 @@ a:hover {
 }
 .login-group {
   background: #ffffff;
+  box-shadow: 0 0 10px rgba(250,250,250,0.8)
   color: #999999;
   border-radius: 8px;
   padding: 10px 20px;
@@ -152,7 +155,6 @@ label.form-invalid:after {
   color: #999999;
   border-left: 3px solid transparent;
   border-radius: 3px;
-  margin-bottom: 8px;
   font-weight: bold;
   height: 0;
   padding: 0 20px 0 17px;
@@ -282,6 +284,5 @@ label:hover:before {
 .logo {
   padding: 15px 0;
   font-size: 25px;
-  color: #aaaaaa;
   font-weight: bold;
 }
